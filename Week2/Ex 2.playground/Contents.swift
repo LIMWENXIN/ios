@@ -1,3 +1,5 @@
 import UIKit
 
-var greeting = "Hello, playground"
+// Declare variables using different data types (Int, Double, Bool, String). Print a message that describes each variable.
+
+
