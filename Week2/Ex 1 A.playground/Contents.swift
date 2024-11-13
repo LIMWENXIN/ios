@@ -1,6 +1,7 @@
 import UIKit
 
-// a
+// Declare a variable to store your favorite movie title. Later, change it to another movie and print both values. “My Favourite Movie is…….”
+
 var movie = "HERRY POTTER"
 print("My Favourite Movie is: ",movie)
 
