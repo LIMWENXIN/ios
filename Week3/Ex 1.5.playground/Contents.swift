@@ -1,7 +1,7 @@
 import UIKit
 
-var username = "LIM WEN XIN"
-var password = "abc123"
+let username = "LIM WEN XIN"
+let password = "abc123"
 
 //var input_username = "LIM WEN XIN"
 var input_username = "LWX"
