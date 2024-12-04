@@ -10,11 +10,14 @@ import UIKit
  Example Input: 3, 6
  Example Output: 18 (because 3 + 4 + 5 + 6 = 18) */
 
-func sumInRange(start:Int, end:Int){
+func sumInRange(start:Int, end:Int) -> Int{
     var sum = 0
-    for index in start...end{
-        sum += index
+    if start<end{
+        for index in start...end{
+            sum += index
+        }
+        print("\(sum)")
     }
-    print("\(sum)")
+    return sum
 }
 sumInRange(start: 3, end:6)
