@@ -9,11 +9,11 @@ For each number, use an if-else statement to check if it is even or odd.
 Count the number of even and odd numbers.
 Return both counts. */
 
-func countEvenOdd(Start:Int, End:Int){
+func countEvenOdd(Start:Int, End:Int) -> (Int,Int){
     var count_Even = 0
     var count_Odd = 0
     
-    for number in Start..<End+1{
+    for number in Start...End{
         if number % 2 != 0{
             count_Even += 1
             print("Even number:\(number)")
@@ -23,8 +23,7 @@ func countEvenOdd(Start:Int, End:Int){
             print("Odd number: \(number)")
         }
     }
-    print("------------------------")
-    return count_Even; count_Odd
+    print("-------------------\nCount Even: \(count_Even) \nCount Odd: \(count_Odd)")
+    return (count_Even, count_Odd)
 }
-
 countEvenOdd(Start:1, End:10)

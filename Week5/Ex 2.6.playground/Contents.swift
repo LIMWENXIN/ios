@@ -9,3 +9,7 @@ import UIKit
  Example Input: width = 4, height = 7
  Example Output: (Area: 28, Perimeter: 22) */
 
+func calculateRectangle(width:Int, height:Int){
+    print("Area: \(width*height), Perimeter: \(2*(width+height))")
+}
+calculateRectangle(width: 4, height: 7)

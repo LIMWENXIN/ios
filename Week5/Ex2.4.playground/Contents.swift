@@ -10,3 +10,12 @@ Test the function with different values.
 Example Input: 5
 Example Output: 120 */
 
+func factorial(n:Int) -> Int{
+    var result = 1
+    for cal in 1...n{
+        result *= cal
+    }
+    print("\(n)!= \(result)")
+    return result
+}
+factorial(n: 5)
