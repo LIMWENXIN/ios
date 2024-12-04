@@ -1,5 +1,24 @@
 import UIKit
 
+func finding_min_max(number:[Int]) -> (Int,Int){
+    var smallest = number[0]
+    var largest = number[0]
+    
+    for n in number{
+        if n < smallest{
+            smallest = n
+        }
+        if largest < n{
+            largest = n
+        }
+    }
+    print("The smallest number is \(smallest).")
+    print("The largest number is \(largest).")
+    return (smallest,largest)
+}
+finding_min_max(number: [10,1,21,59,100])
+
+
 /*
 Given an array of integers, use a for loop to find the smallest and largest numbers.
 
@@ -11,17 +30,20 @@ If the current number is smaller than smallest, update smallest.
 If the current number is larger than largest, update largest.
 */
 
-let number = [10,1,21,59,100]
-var smallest = number[0]
-var largest = number[0]
+/*
+ let number = [10,1,21,59,100]
+ var smallest = number[0]
+ var largest = number[0]
 
-for n in number{
-    if n < smallest{
-        smallest = n
-    }
-    if largest < n{
-        largest = n
-    }
-}
-print("The smallest number is \(smallest).")
-print("The largest number is \(largest).")
+ for n in number{
+     if n < smallest{
+         smallest = n
+     }
+     if largest < n{
+         largest = n
+     }
+ }
+ print("The smallest number is \(smallest).")
+ print("The largest number is \(largest).")
+ */
+

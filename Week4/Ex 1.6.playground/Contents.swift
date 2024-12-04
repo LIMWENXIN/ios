@@ -1,4 +1,23 @@
 import UIKit
+func half_diamond_pattern(maxstar:Int){
+    var reversed = ""
+    
+    for a in 1...maxstar{
+        for b in 1...a{
+            print("*", terminator: "")
+        }
+        print()
+    }
+    var n = maxstar-1
+    for c in 1...n{
+        for d in 1...n{
+            print("*", terminator: "")
+        }
+        print()
+        n -= 1
+    }
+}
+half_diamond_pattern(maxstar: 4)
 
 /*
  Create a function that prints a half diamond pattern of stars using nested for loops.
@@ -17,6 +36,7 @@ import UIKit
  Bottom Half: Decreasing stars from 3 back to 1.
 
 */
+/*
 var reversed = ""
 var num = 4
 
@@ -34,4 +54,4 @@ for c in 1...n{
     print()
     n -= 1
 }
-
+*/
