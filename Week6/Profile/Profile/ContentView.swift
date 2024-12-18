@@ -26,6 +26,7 @@ struct ContentView: View {
                 Text("LIM WEN XIN")
                     .font(.largeTitle)
                     .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                    .foregroundColor(.color)
                 Text("IOS Developer")
                     .font(.title)
                 Text("ACSS is a digital agency company and website studio specializing in products, E-commerce, and SaaS website.")
