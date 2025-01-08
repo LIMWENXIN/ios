@@ -8,11 +8,19 @@
 import SwiftUI
 
 struct day: View {
+    var day:String
+    var icon:String
+    var num:String
+    
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text(day)
+            Image(systemName: icon)
+            Text(num)
+        }
     }
 }
 
 #Preview {
-    day()
+    day(day: "-", icon: "-", num: "-")
 }
