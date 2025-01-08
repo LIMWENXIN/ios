@@ -92,7 +92,7 @@ struct ContentView: View {
                         }
                     )
             
-            Color.black
+            Color("Tinabg")
                     .cornerRadius(15)
                     .padding(10)
                     .overlay(
