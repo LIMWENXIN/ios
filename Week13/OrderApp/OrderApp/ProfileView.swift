@@ -6,10 +6,56 @@
 //
 
 import SwiftUI
+import SwiftData
 
 struct ProfileView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+    @Query var allItems: [MenuItem]
+    @Environment(\.modelContext) private var modelContext
+    
+    @State private var email = ""
+    @State private var password = ""
+    @State private var confirmpassword = ""
+    
+    var body:some View{
+        Text("Register Page")
+            .font(.title)
+        VStack {
+            HStack {
+                Text("Email:")
+                TextField("email", text: $email)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(15)
+            }
+            HStack {
+                Text("Password:")
+                SecureField("password", text: $password)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(15)
+            }
+            HStack {
+                Text("Confirm Password:")
+                SecureField("confirmpassword", text: $confirmpassword)
+                    .padding()
+                    .background(Color.white)
+                    .cornerRadius(15)
+            }
+            
+            Button("Register") {}
+            
+            Button(action:{clearAllMenuItems()}){
+                Text("Clear All Menu Items")
+            }
+        }
+        .padding()
+        
+    }
+    private func clearAllMenuItems(){
+        for item in allItems {
+            modelContext.delete(item)
+        }
+        try? modelContext.save()
     }
 }
 

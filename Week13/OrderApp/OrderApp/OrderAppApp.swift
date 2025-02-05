@@ -13,5 +13,6 @@ struct OrderAppApp: App {
         WindowGroup {
             ContentView()
         }
+        .modelContainer(for:MenuItem.self)
     }
 }
