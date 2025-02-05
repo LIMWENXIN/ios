@@ -66,8 +66,8 @@ struct ContentView: View {
                                 Button("Change Day Time",action: {
                                     isBlack = true
                                 })
-                                .backgroundStyle(Color.black)
                             }
+                            .backgroundStyle(Color.black)
                         }label:{
                             Text(europe.city)
                         }
