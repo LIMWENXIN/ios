@@ -39,7 +39,6 @@ struct OrderSummaryView: View {
                 .font(.headline)
                 .padding()
         }
-        .listStyle(InsetGroupedListStyle())
     }
     
     private func calculateOrderTotal() -> Double {
