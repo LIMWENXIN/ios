@@ -25,7 +25,6 @@ struct ContentView: View {
                 .tabItem {
                     Label("Order Summary", systemImage: "cart")
                 }
-            
             ProfileView()
                 .tabItem {
                     Label("Profile", systemImage: "person.crop.circle")

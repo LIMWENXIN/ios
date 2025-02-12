@@ -29,16 +29,20 @@ let AsiaWeatherData: [CityWeather] = [
             Weather(day: "FRI", icon: "cloud.heavyrain", temperature: 31),
             Weather(day: "SAT", icon: "cloud.bolt", temperature: 29),
             Weather(day: "SUN", icon: "cloud", temperature: 32),
+            Weather(day: "MON", icon: "cloud.heavyrain", temperature: 34),
+            Weather(day: "TUE", icon: "cloud.bolt", temperature: 34),
         ]
     ),
     CityWeather(
-        city: "Kuala Lumpur",
+        city: "Tokyo",
         weather: [
-            Weather(day: "TODAY", icon: "cloud",temperature: 32),
-            Weather(day: "THU", icon: "cloud.bolt", temperature: 31),
-            Weather(day: "FRI", icon: "cloud.heavyrain", temperature: 31),
-            Weather(day: "SAT", icon: "cloud", temperature: 30),
-            Weather(day: "SUN", icon: "cloud.sun", temperature: 32),
+            Weather(day: "TODAY", icon: "cloud",temperature: 12),
+            Weather(day: "THU", icon: "cloud.bolt", temperature: 13),
+            Weather(day: "FRI", icon: "cloud.heavyrain", temperature: 15),
+            Weather(day: "SAT", icon: "cloud", temperature: 15),
+            Weather(day: "SUN", icon: "cloud.sun", temperature: 12),
+            Weather(day: "MON", icon: "cloud.sun", temperature: 12),
+            Weather(day: "TUE", icon: "cloud.sun", temperature: 9),
         ]
     ),
     CityWeather(
@@ -49,6 +53,8 @@ let AsiaWeatherData: [CityWeather] = [
             Weather(day: "FRI", icon: "cloud.sun.fill", temperature: 15),
             Weather(day: "SAT", icon: "cloud.sun.fill", temperature: 17),
             Weather(day: "SUN", icon: "cloud.sun", temperature: 15),
+            Weather(day: "MON", icon: "cloud.sun.fill", temperature: 12),
+            Weather(day: "TUE", icon: "cloud.sun", temperature: 11),
         ]
     )
 ]
@@ -62,6 +68,8 @@ let EuropeWeatherData: [CityWeather] = [
             Weather(day: "FRI", icon: "cloud.sun.fill", temperature: 8),
             Weather(day: "SAT", icon: "cloud.sun.fill", temperature: 5),
             Weather(day: "SUN", icon: "cloud.sun", temperature:7),
+            Weather(day: "MON", icon: "cloud.rain", temperature: 6),
+            Weather(day: "TUE", icon: "cloud.sun", temperature: 5),
         ]
     ),
     CityWeather(
@@ -72,6 +80,8 @@ let EuropeWeatherData: [CityWeather] = [
             Weather(day: "FRI", icon: "cloud", temperature: 10),
             Weather(day: "SAT", icon: "cloud", temperature: 3),
             Weather(day: "SUN", icon: "cloud.sun", temperature: 5),
+            Weather(day: "MON", icon: "cloud", temperature: 1),
+            Weather(day: "TUE", icon: "cloud.sun", temperature: 4),
         ]
     ),
     CityWeather(
@@ -82,6 +92,8 @@ let EuropeWeatherData: [CityWeather] = [
             Weather(day: "FRI", icon: "cloud.sun.fill", temperature: 8),
             Weather(day: "SAT", icon: "cloud.sun.fill", temperature: 7),
             Weather(day: "SUN", icon: "cloud.drizzle", temperature: 5),
+            Weather(day: "MON", icon: "cloud.sun.fill", temperature: 9),
+            Weather(day: "TUE", icon: "cloud.drizzle", temperature: 11),
         ]
     )
 ]
@@ -141,7 +153,7 @@ struct CityWeatherView: View {
                             .padding(.vertical)
                         }
                     }
-                    Button("Change Color",action: {
+                    Button("Change Day Time",action: {
                         isBlack.toggle()
                     })
                     .foregroundStyle(Color.white)
