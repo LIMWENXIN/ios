@@ -29,13 +29,18 @@ struct Artists_Card: View {
                                 Image(image)
                                     .resizable()
                                     .aspectRatio(contentMode: .fit)
-                                VStack {
+                                VStack{
                                     Spacer()
-                                    Text("View")
-                                        .background(.white)
-                                        .padding()
+                                    HStack {
+                                        Spacer()
+                                        Text("View")
+                                            .background(.white)
+                                            .padding()
+                                            .frame(alignment: .trailing)
+                                    }
                                 }
                             }
+                            
                         }
                     )
             }

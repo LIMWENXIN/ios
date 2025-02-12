@@ -11,7 +11,7 @@ struct ContentView: View {
 
     @State private var isSheetPresented = false
     @State private var searchText = ""
-    @State private var isBlack = false
+
     
     let asiacities = AsiaWeatherData
     let europecities = EuropeWeatherData
@@ -40,15 +40,6 @@ struct ContentView: View {
                     ForEach(asiasearchResults, id:\.city){ asia in
                         NavigationLink{
                             CityWeatherView(cityWeather: asia)
-                            ZStack {
-                                Color.white
-                                    .cornerRadius(10)
-                                    .frame(width: 280, height: 40)
-                                Button("Change Day Time",action: {
-                                    isBlack = true
-                                })
-                            }
-                            .backgroundStyle(Color.black)
                         }label:{
                             Text(asia.city)
                         }
@@ -59,15 +50,6 @@ struct ContentView: View {
                     ForEach(eurosearchResults, id:\.city){ europe in
                         NavigationLink{
                             CityWeatherView(cityWeather: europe)
-                            ZStack {
-                                Color.white
-                                    .cornerRadius(10)
-                                    .frame(width: 280, height: 40)
-                                Button("Change Day Time",action: {
-                                    isBlack = true
-                                })
-                            }
-                            .backgroundStyle(Color.black)
                         }label:{
                             Text(europe.city)
                         }

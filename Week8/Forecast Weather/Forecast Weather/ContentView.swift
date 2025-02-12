@@ -28,7 +28,7 @@ struct ContentView: View {
                 HStack{
                     day(day: "THU", icon: "cloud.sun.bolt", num: "33°C")
                     day(day: "FRI", icon: "cloud.sun.fill", num: "34°C")
-                    day(day: "SAT", icon: "sun.rain", num: "33°C")
+                    day(day: "SAT", icon: "sun.rain.fill", num: "33°C")
                     day(day: "SUN", icon: "cloud.sun.fill", num: "30°C")
                     day(day: "MON", icon: "sun.rain.fill", num: "31°C")
                 }

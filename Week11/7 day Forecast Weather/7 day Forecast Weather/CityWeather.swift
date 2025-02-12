@@ -88,27 +88,69 @@ let EuropeWeatherData: [CityWeather] = [
 
 struct CityWeatherView: View {
     var cityWeather: CityWeather
+    @State private var isBlack = false
     
     var body: some View {
-        Text(cityWeather.city)
-            .font(.title)
-            .bold()
-        HStack {
-            ForEach(cityWeather.weather) { weather in
-                VStack {
-                    Text(weather.day)
-                        .font(.headline)
-                    Image(systemName: weather.icon)
-                        .resizable()
-                        .scaledToFit()
-                        .frame(width: 40, height: 40)
-                    Text("\(weather.temperature)°C")
-                        .font(.subheadline)
+        if isBlack == false{
+            Text(cityWeather.city)
+                .font(.title)
+                .bold()
+            HStack {
+                ForEach(cityWeather.weather) { weather in
+                    VStack {
+                        Text(weather.day)
+                            .font(.headline)
+                        Image(systemName: weather.icon)
+                            .resizable()
+                            .scaledToFit()
+                            .frame(width: 40, height: 40)
+                        Text("\(weather.temperature)°C")
+                            .font(.subheadline)
+                    }
+                    .padding(.vertical)
                 }
-                .padding(.vertical)
+            }
+            Button("Change Color",action: {
+                isBlack.toggle()
+            })
+            .foregroundStyle(Color.black)
+        }
+        else{
+            ZStack{
+                Color.black
+                VStack{
+                    Text(cityWeather.city)
+                        .font(.title)
+                        .bold()
+                        .foregroundStyle(.white)
+                    HStack {
+                        ForEach(cityWeather.weather) { weather in
+                            VStack {
+                                Text(weather.day)
+                                    .font(.headline)
+                                    .foregroundStyle(.white)
+                                Image(systemName: weather.icon)
+                                    .resizable()
+                                    .scaledToFit()
+                                    .frame(width: 40, height: 40)
+                                    .foregroundStyle(.white)
+                                Text("\(weather.temperature)°C")
+                                    .font(.subheadline)
+                                    .foregroundStyle(.white)
+                            }
+                            .padding(.vertical)
+                        }
+                    }
+                    Button("Change Color",action: {
+                        isBlack.toggle()
+                    })
+                    .foregroundStyle(Color.white)
+                }
             }
         }
-
-        .padding()
     }
+}
+
+#Preview {
+    ContentView()
 }
